@@ -4,9 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Expenses tracker</title>
 </head>
 <body>
-    
+    <h1 class='expense-title'>Expenses Tracker</h1>
+    <section class="budget">
+        <h1>Budget</h1>
+    <h2 id="balance">12389713283</h2> 
+    </section>
+
+<section class="budget-manipulation">
+   
+    <form action="" method="post" id="budget-set">
+        <input type="number" min="0.01" step="0.01" class="number" name="budget"  id="number-set-budget">
+        <input type="submit" class="button" value="Set budget">
+    </form>
+
+    <form action="" method="post" id="budget-add">
+        <input type="number" min="0.01" step="0.01" class="number" name="budget" id="number-add-budget">
+        <input type="submit" class="button" value="Add to budget">
+    </form>
+
+</section>    
+    <section class="add-expense">
+    <h2>Add expense</h2>
+<form action="post" method="post">
+    <input type="date" name="date" class="number" id="date">
+    <input type="text" name="description" class="number" id="description" placeholder="Description">
+    <input type="number" name="number" min="0.01" step="0.01" class="number"  id="number-add-expense" placeholder="Cost">
+    <input type="submit" name="submit" class="button" value="Add to list">  
+</form>
+</section>
+<section class="history"> 
+<h1>History</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Budget</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>12.03.04</th>
+            <td>Mrożonki</td>
+            <td>320,77 zł</td>
+            <td>Pozostałośc budżetu</td>
+            <td><button type="submit" id="delete" >X</button></td>
+        </tr>
+    </tbody>
+    <script src="script.js"></script>
+</section>
 </body>
 </html>
