@@ -22,16 +22,8 @@
 
 }
 
-.budget-set {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.budget-add {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+#budget-reset-button {
+    display: none;
 }
 
 .budget-manipulation > form {
