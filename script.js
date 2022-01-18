@@ -1,34 +1,39 @@
-// Set budget
+import {settingNewBudget} from "./modules/budgetSet";
+import {resetBudget} from "./modules/resetBudget";
+import {idGenerator} from "./modules/idGenerator";
+import { addExpense} from "./modules/addExpense"
+
+
+// Set budget - tested
 
 let budget = 0;
 
 const balance = document.getElementById("balance");
 const setBudgetButton = document.getElementById("budget-set-button");
-const resetBudgetButton = document.getElementById("budget-reset-button");
+const valueInput = document.getElementById("number-set-budget");
 
 setBudgetButton.addEventListener("click", () => {
-  const valueToSet = document.getElementById("number-set-budget").value;
-  budget += Number(valueToSet);
-  balance.innerHTML = `${budget.toFixed(2)} zł`;
-  resetBudgetButton.style.display = "block";
-  setBudgetButton.value = "Add budget";
+  settingNewBudget(budget, valueInput, balance, resetBudgetButton, setBudgetButton)
 });
 
+// reset budget - tested
+const resetBudgetButton = document.getElementById("budget-reset-button");
+
 resetBudgetButton.addEventListener("click", () => {
-  budget = 0;
-  balance.innerHTML = `${budget.toFixed(2)} zł`;
+  resetBudget(budget, balance);
 });
+
+// if generator  
+function idGenerator() {
+  return Math.floor(Math.random() * 1000000000);
+};
 
 // function addExpense (exData, description, cost, minusBudget) {
 
 const tableBody = document.getElementById("table-body");
 const addTable = document.getElementById("add-table");
 let expensesHistory = [];
-let expenseArray = ``;
-
-function idGenerator() {
-  return Math.floor(Math.random() * 1000000000);
-}
+let expenseDom = ``;
 
 function addExpenseToDom(expense) {
   for (let i = 0; i < expense.length; i++) {
@@ -42,38 +47,41 @@ function addExpenseToDom(expense) {
 </tr>
     `;
 
-    expenseArray += expenseToAdd;
+    expenseDom += expenseToAdd;
   }
 
-  tableBody.innerHTML = expenseArray;
+  tableBody.innerHTML = expenseDom;
 }
 
 addTable.addEventListener("click", () => {
+
+  
   const tableDate = document.getElementById("date").value;
   const tableDescription = document.getElementById("description").value;
   const tableNumber = document.getElementById("number-add-expense").value;
 
-  if (
-    tableDate.trim() === "" ||
-    tableDescription.trim() === "" ||
-    tableNumber.trim() === ""
-  ) {
-    alert("Please add all details.");
-  } else {
-    const expense = {
-      id: idGenerator(),
-      date: tableDate,
-      description: tableDescription,
-      cost: tableNumber,
-    };
+  addExpense(tableDate, tableDescription, tableNumber, expensesHistory, expenseDom)
+//  if (
+//     tableDate.trim() === "" ||
+//     tableDescription.trim() === "" ||
+//     tableNumber.trim() === ""
+//   ) {
+//     alert("Please add all details.");
+//   } else {
+//     const expense = {
+//       id: idGenerator(),
+//       date: tableDate,
+//       description: tableDescription,
+//       cost: tableNumber,
+//     };
 
-    budgetDelete(tableNumber);
+//     budgetDelete(tableNumber);
 
-    expensesHistory.push(expense);
-    expenseArray = "";
-    addExpenseToDom(expensesHistory);
-  }
-});
+//     expensesHistory.push(expense);
+//     expenseDom = "";
+//     addExpenseToDom(expensesHistory);
+//   }
+// });
 
 //deleting expense
 
@@ -89,9 +97,9 @@ function deletingExpense(expenseId) {
   budgetAdd(toMinus[0].cost);
 
   expensesHistory = newExpenseArray;
-  expenseArray = "";
-  addExpenseToDom(expensesHistory);
-}
+  expenseDom = "";
+  expenseDom(expensesHistory);
+};
 
 //adding expense from budger function
 function budgetAdd(expenseAdd) {
@@ -104,3 +112,5 @@ function budgetDelete(expenseCost) {
   budget -= Number(expenseCost);
   balance.innerHTML = `${budget.toFixed(2)} zł`;
 }
+
+module.exports = {idGenerator , setBudgetButton, budgetDelete}; 
