@@ -1,16 +1,16 @@
 function settingNewBudget(
-  budgetP,
   valueInputP,
   balanceP,
   resetBudgetButtonP,
   setBudgetButtonP
 ) {
-  valueToSetP = valueInputP.value;
-  budgetP += Number(valueToSetP);
+  let budgetP = JSON.parse(window.localStorage.getItem("budget"));
+  budgetP += Number(valueInputP);
+  window.localStorage.setItem("budget", budgetP);
   balanceP.innerHTML = `${budgetP.toFixed(2)} zł`;
   resetBudgetButtonP.style.display = "block";
   setBudgetButtonP.value = "Add budget";
 }
 
-// export {settingNewBudget}
-module.exports = { settingNewBudget };
+export { settingNewBudget };
+// module.exports = { settingNewBudget };

@@ -8,7 +8,8 @@
   "scripts": {
     "test": "jest --coverage --env=jsdom",
     "watch": "parcel watch",
-    "build": "parcel build"
+    "build": "parcel build",
+    "start": "npx parcel index.html"
   },
   "repository": {
     "type": "git",

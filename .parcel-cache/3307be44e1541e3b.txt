@@ -1,4 +1,4 @@
-19671
+19680
 75C:\Users\Urban\Desktop\Jest\node_modules\core-js\es\string\virtual\blink.js132865620967263918 0
 97C:\Users\Urban\Desktop\Jest\node_modules\@swc\helpers\lib\_class_static_private_field_spec_set.js132865620966573551 0
 73C:\Users\Urban\Desktop\Jest\node_modules\loader-utils\lib\urlToRequest.js132865620960722831 0
@@ -17,7 +17,7 @@
 69C:\Users\Urban\Desktop\Jest\node_modules\lodash\_insertWrapDetails.js132857919777845363 0
 71C:\Users\Urban\Desktop\Jest\node_modules\yaml\browser\dist\parse-cst.js132865620962485994 0
 66C:\Users\Urban\Desktop\Jest\node_modules\diffie-hellman\browser.js132865620958706367 0
-40C:\Users\Urban\Desktop\Jest\package.json132866465773587235 0
+40C:\Users\Urban\Desktop\Jest\package.json132879468392271648 0
 82C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\mathematica.js132865620967601655 0
 72C:\Users\Urban\Desktop\Jest\node_modules\source-map\lib\binary-search.js132857919753640418 0
 76C:\Users\Urban\Desktop\Jest\node_modules\@parcel\core\test\fixtures\main-mjs132865620998648746 1
@@ -45,7 +45,7 @@
 37C:\Users\Urban\Desktop\Jest\style.css132865623526062570 0
 63C:\Users\Urban\Desktop\Jest\node_modules\normalize-path\LICENSE132857919741020352 0
 66C:\Users\Urban\Desktop\Jest\node_modules\lodash\matchesProperty.js132857919789349232 0
-32C:\Users\Urban\Desktop\Jest\dist132867508570257668 1
+32C:\Users\Urban\Desktop\Jest\dist132879665643877517 1
 75C:\Users\Urban\Desktop\Jest\node_modules\core-js\modules\es.array.reduce.js132865620969399583 0
 71C:\Users\Urban\Desktop\Jest\node_modules\@parcel\core\lib\AssetGraph.js132865620994646590 0
 72C:\Users\Urban\Desktop\Jest\node_modules\css-tree\lib\tokenizer\utils.js132865620967075187 0
@@ -91,7 +91,7 @@
 70C:\Users\Urban\Desktop\Jest\node_modules\yargs\build\lib\validation.js132857919763220350 0
 77C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\django.js132865620967134786 0
 48C:\Users\Urban\Desktop\Jest\node_modules\isarray132865620956764396 1
-38C:\Users\Urban\Desktop\Jest\index.html132867504061694327 0
+38C:\Users\Urban\Desktop\Jest\index.html132868432116141758 0
 75C:\Users\Urban\Desktop\Jest\node_modules\uncss\node_modules\acorn-walk\dist132865620989237899 1
 83C:\Users\Urban\Desktop\Jest\node_modules\xml-name-validator\lib\generated-parser.js132857919747283746 0
 81C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-js\node_modules\.bin132865620998897077 1
@@ -122,7 +122,7 @@
 69C:\Users\Urban\Desktop\Jest\node_modules\uri-js\dist\es5\uri.all.d.ts132865620964159764 0
 46C:\Users\Urban\Desktop\Jest\node_modules\cssom132857919763970421 1
 84C:\Users\Urban\Desktop\Jest\node_modules\readable-stream\node_modules\string_decoder132865620953445110 1
-35C:\Users\Urban\Desktop\Jest\modules132867427396486741 1
+35C:\Users\Urban\Desktop\Jest\modules132879523707714737 1
 68C:\Users\Urban\Desktop\Jest\node_modules\define-properties\.eslintrc132865620952925177 0
 56C:\Users\Urban\Desktop\Jest\node_modules\core-js\es\math132865620982710278 1
 58C:\Users\Urban\Desktop\Jest\node_modules\lodash\fp\util.js132857919794925336 0
@@ -143,7 +143,7 @@
 86C:\Users\Urban\Desktop\Jest\node_modules\@babel\core\src\config\files\index-browser.ts132857919771060381 0
 95C:\Users\Urban\Desktop\Jest\node_modules\v8-to-istanbul\node_modules\source-map\source-map.d.ts132857919747680335 0
 88C:\Users\Urban\Desktop\Jest\node_modules\uncss\node_modules\whatwg-url\lib\public-api.js132865620988875214 0
-37C:\Users\Urban\Desktop\Jest\script.js132867508569582198 0
+37C:\Users\Urban\Desktop\Jest\script.js132879665652601763 0
 83C:\Users\Urban\Desktop\Jest\node_modules\core-js\modules\esnext.array.last-index.js132865620971272011 0
 77C:\Users\Urban\Desktop\Jest\node_modules\resolve\test\precedence\aaa\index.js132857919769947563 0
 79C:\Users\Urban\Desktop\Jest\node_modules\@parcel\runtime-js\lib\helpers\browser132865620981548076 1
@@ -225,7 +225,7 @@
 56C:\Users\Urban\Desktop\Jest\node_modules\jake\lib\api.js132865620961919787 0
 68C:\Users\Urban\Desktop\Jest\node_modules\json-stringify-safe\LICENSE132865620954246297 0
 113C:\Users\Urban\Desktop\Jest\node_modules\uncss\node_modules\jsdom\lib\jsdom\living\nodes\HTMLParamElement-impl.js132865620994174761 0
-50C:\Users\Urban\Desktop\Jest\_tests_\script.test.js132867511902892584 0
+50C:\Users\Urban\Desktop\Jest\_tests_\script.test.js132870144430720949 0
 61C:\Users\Urban\Desktop\Jest\node_modules\querystring-es3\test132865620962247596 1
 72C:\Users\Urban\Desktop\Jest\node_modules\es-abstract\2021\GetIterator.js132865620968128117 0
 83C:\Users\Urban\Desktop\Jest\node_modules\@jest\core\build\lib\updateGlobalConfig.js132857919768940561 0
@@ -653,7 +653,7 @@
 58C:\Users\Urban\Desktop\Jest\node_modules\babel-preset-jest132857919750270322 1
 69C:\Users\Urban\Desktop\Jest\node_modules\readable-stream\package.json132865620962163157 0
 54C:\Users\Urban\Desktop\Jest\node_modules\cssnano-utils132865620960370194 1
-55C:\Users\Urban\Desktop\Jest\dist\index.de101254.css.map132867508100475345 0
+55C:\Users\Urban\Desktop\Jest\dist\index.de101254.css.map132879663305266898 0
 90C:\Users\Urban\Desktop\Jest\node_modules\terser\node_modules\source-map\lib\source-node.js132865620962227720 0
 94C:\Users\Urban\Desktop\Jest\node_modules\caniuse-lite\data\features\stricttransportsecurity.js132857919790834234 0
 76C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\scss\brown-papersq.png132865620968416183 0
@@ -6756,7 +6756,7 @@
 58C:\Users\Urban\Desktop\Jest\node_modules\sshpk\Jenkinsfile132865620952577502 0
 96C:\Users\Urban\Desktop\Jest\node_modules\css-modules-loader-core\node_modules\strip-ansi\license132865620991785797 0
 54C:\Users\Urban\Desktop\Jest\node_modules\sshpk\LICENSE132865620952945041 0
-58C:\Users\Urban\Desktop\Jest\coverage\lcov-report\sorter.js132867490488497681 0
+58C:\Users\Urban\Desktop\Jest\coverage\lcov-report\sorter.js132870005936339747 0
 62C:\Users\Urban\Desktop\Jest\node_modules\@types\node\repl.d.ts132857919771110406 0
 62C:\Users\Urban\Desktop\Jest\node_modules\lodash\fp\isNative.js132857919787699237 0
 71C:\Users\Urban\Desktop\Jest\node_modules\es-abstract\operations\2018.js132865620959198060 0
@@ -9035,7 +9035,7 @@
 59C:\Users\Urban\Desktop\Jest\node_modules\parse-asn1\LICENSE132865620957285904 0
 51C:\Users\Urban\Desktop\Jest\node_modules\parcel\lib132865620987881881 1
 55C:\Users\Urban\Desktop\Jest\node_modules\parcel\LICENSE132865620987862013 0
-68C:\Users\Urban\Desktop\Jest\coverage\lcov-report\block-navigation.js132867490488482783 0
+68C:\Users\Urban\Desktop\Jest\coverage\lcov-report\block-navigation.js132870005936329814 0
 60C:\Users\Urban\Desktop\Jest\node_modules\lodash\fp\negate.js132857919789934233 0
 60C:\Users\Urban\Desktop\Jest\node_modules\parcel\package.json132865620987911680 0
 85C:\Users\Urban\Desktop\Jest\node_modules\loader-utils\node_modules\json5\lib\parse.js132865620957797471 0
@@ -11670,7 +11670,7 @@
 70C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-babel\src132865620977688984 1
 101C:\Users\Urban\Desktop\Jest\node_modules\jest-snapshot\node_modules\semver\functions\compare-build.js132857919752250366 0
 95C:\Users\Urban\Desktop\Jest\node_modules\jest-snapshot\node_modules\semver\functions\compare.js132857919754625330 0
-70C:\Users\Urban\Desktop\Jest\coverage\lcov-report\sort-arrow-sprite.png132867490488487748 0
+70C:\Users\Urban\Desktop\Jest\coverage\lcov-report\sort-arrow-sprite.png132870005936334779 0
 92C:\Users\Urban\Desktop\Jest\node_modules\jest-snapshot\node_modules\semver\functions\diff.js132857919757685248 0
 90C:\Users\Urban\Desktop\Jest\node_modules\jest-snapshot\node_modules\semver\functions\eq.js132857919757980335 0
 77C:\Users\Urban\Desktop\Jest\node_modules\es-abstract\2020\BigInt\bitwiseOR.js132865620966568586 0
@@ -13073,7 +13073,7 @@
 77C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\puppet.js132865620967864878 0
 74C:\Users\Urban\Desktop\Jest\node_modules\core-js\features\instance\keys.js132865620975866220 0
 64C:\Users\Urban\Desktop\Jest\node_modules\core-js\actual\index.js132865620973765966 0
-47C:\Users\Urban\Desktop\Jest\coverage\clover.xml132867490488562251 0
+47C:\Users\Urban\Desktop\Jest\coverage\clover.xml132870005936414246 0
 80C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\purebasic.js132865620967869851 0
 74C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\qml.js132865620967904617 0
 79C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\lib\languages\routeros.js132865620967934413 0
@@ -18254,6 +18254,7 @@
 95C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-html\node_modules\semver\README.md132865620957221336 0
 90C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-html\node_modules\.bin\semver132865620998916947 0
 85C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-html\lib\dependencies.js132865620978746881 0
+54C:\Users\Urban\Desktop\Jest\modules\deletingExpense.js132879662461974312 0
 88C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-html\lib\HTMLTransformer.js132865620978786616 0
 68C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-css\lib132865620979159118 1
 77C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-css\node_modules132865620998807679 1
@@ -18559,6 +18560,7 @@
 70C:\Users\Urban\Desktop\Jest\node_modules\@parcel\optimizer-cssnano\src132865620987479583 1
 90C:\Users\Urban\Desktop\Jest\node_modules\@parcel\optimizer-cssnano\src\CSSNanoOptimizer.js132865620987484544 0
 90C:\Users\Urban\Desktop\Jest\node_modules\@parcel\optimizer-cssnano\lib\CSSNanoOptimizer.js132865620987474618 0
+68C:\Users\Urban\Desktop\Jest\coverage\lcov-report\idGenerator.js.html132870005936394381 0
 71C:\Users\Urban\Desktop\Jest\node_modules\@parcel\node-resolver-core\lib132865620968083417 1
 75C:\Users\Urban\Desktop\Jest\node_modules\@parcel\node-resolver-core\LICENSE132865620967735750 0
 71C:\Users\Urban\Desktop\Jest\node_modules\@parcel\node-resolver-core\src132865620968093354 1
@@ -19652,21 +19654,28 @@
 51C:\Users\Urban\Desktop\Jest\node_modules\.bin\uncss132865620998921912 0
 55C:\Users\Urban\Desktop\Jest\node_modules\.bin\uncss.ps1132865620998921912 0
 54C:\Users\Urban\Desktop\Jest\node_modules\.bin\uuid.ps1132865620998921912 0
-48C:\Users\Urban\Desktop\Jest\modules\budgetSet.js132867435814027213 0
-50C:\Users\Urban\Desktop\Jest\modules\resetBudget.js132867502462923602 0
-50C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js132867508570237790 0
-54C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js.map132867508570247735 0
-51C:\Users\Urban\Desktop\Jest\dist\index.de101254.css132867508100450505 0
-43C:\Users\Urban\Desktop\Jest\dist\index.html132867508100470379 0
+49C:\Users\Urban\Desktop\Jest\modules\addExpense.js132879660869335280 0
+54C:\Users\Urban\Desktop\Jest\modules\addExpenseToDom.js132879661282078985 0
+48C:\Users\Urban\Desktop\Jest\modules\budgetAdd.js132879661802341298 0
+51C:\Users\Urban\Desktop\Jest\modules\budgetDelete.js132879661835479224 0
+48C:\Users\Urban\Desktop\Jest\modules\budgetSet.js132879661993682324 0
+50C:\Users\Urban\Desktop\Jest\modules\idGenerator.js132879662593168604 0
+50C:\Users\Urban\Desktop\Jest\modules\resetBudget.js132879662700452172 0
+50C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js132879665643857654 0
+54C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js.map132879665643872547 0
+51C:\Users\Urban\Desktop\Jest\dist\index.de101254.css132879663305247029 0
+43C:\Users\Urban\Desktop\Jest\dist\index.html132879663305237096 0
 49C:\Users\Urban\Desktop\Jest\dist\Jest.45ee5e70.js132867503886221918 0
 40C:\Users\Urban\Desktop\Jest\dist\main.js132867437123837502 0
-56C:\Users\Urban\Desktop\Jest\coverage\coverage-final.json132867490488403317 0
-48C:\Users\Urban\Desktop\Jest\coverage\lcov-report132867465450326827 1
-46C:\Users\Urban\Desktop\Jest\coverage\lcov.info132867490488537423 0
-57C:\Users\Urban\Desktop\Jest\coverage\lcov-report\base.css132867490488472845 0
-66C:\Users\Urban\Desktop\Jest\coverage\lcov-report\budgetSet.js.html132867490488537423 0
-60C:\Users\Urban\Desktop\Jest\coverage\lcov-report\favicon.png132867490488482783 0
-59C:\Users\Urban\Desktop\Jest\coverage\lcov-report\index.html132867490488517546 0
-61C:\Users\Urban\Desktop\Jest\coverage\lcov-report\prettify.css132867490488502648 0
-60C:\Users\Urban\Desktop\Jest\coverage\lcov-report\prettify.js132867490488507615 0
-68C:\Users\Urban\Desktop\Jest\coverage\lcov-report\resetBudget.js.html132867490488542387 0
+56C:\Users\Urban\Desktop\Jest\coverage\coverage-final.json132870005936255316 0
+48C:\Users\Urban\Desktop\Jest\coverage\lcov-report132869775799946481 1
+46C:\Users\Urban\Desktop\Jest\coverage\lcov.info132870005936394381 0
+67C:\Users\Urban\Desktop\Jest\coverage\lcov-report\addExpense.js.html132870005936374514 0
+72C:\Users\Urban\Desktop\Jest\coverage\lcov-report\addExpenseToDom.js.html132870005936384446 0
+57C:\Users\Urban\Desktop\Jest\coverage\lcov-report\base.css132870005936324848 0
+66C:\Users\Urban\Desktop\Jest\coverage\lcov-report\budgetSet.js.html132870005936389413 0
+60C:\Users\Urban\Desktop\Jest\coverage\lcov-report\favicon.png132870005936329814 0
+59C:\Users\Urban\Desktop\Jest\coverage\lcov-report\index.html132870005936359614 0
+61C:\Users\Urban\Desktop\Jest\coverage\lcov-report\prettify.css132870005936339747 0
+60C:\Users\Urban\Desktop\Jest\coverage\lcov-report\prettify.js132870005936344714 0
+68C:\Users\Urban\Desktop\Jest\coverage\lcov-report\resetBudget.js.html132870005936394381 0

@@ -521,110 +521,220 @@ function hmrAcceptRun(bundle, id) {
 },{}],"8fvzf":[function(require,module,exports) {
 var _budgetSet = require("./modules/budgetSet");
 var _resetBudget = require("./modules/resetBudget");
+var _addExpense = require("./modules/addExpense");
+var _addExpenseToDom = require("./modules/addExpenseToDom");
+var _budgetDelete = require("./modules/budgetDelete");
 // Set budget - tested
-let budget = 0;
-const balance = document.getElementById("balance");
+window.localStorage.setItem("budget", 0);
 const setBudgetButton = document.getElementById("budget-set-button");
-const valueInput = document.getElementById("number-set-budget");
 setBudgetButton.addEventListener("click", ()=>{
-    _budgetSet.settingNewBudget(budget, valueInput, balance, resetBudgetButton, setBudgetButton);
+    const balance = document.getElementById("balance");
+    const setBudgetButton1 = document.getElementById("budget-set-button");
+    const valueInput = document.getElementById("number-set-budget").value;
+    _budgetSet.settingNewBudget(valueInput, balance, resetBudgetButton, setBudgetButton1);
 });
 // reset budget - tested
 const resetBudgetButton = document.getElementById("budget-reset-button");
 resetBudgetButton.addEventListener("click", ()=>{
-    _resetBudget.resetBudget(budget, balance);
+    const balance = document.getElementById("balance");
+    _resetBudget.resetBudget(balance);
 });
-// function addExpense (exData, description, cost, minusBudget) {
-const tableBody = document.getElementById("table-body");
+// Generating a table of expenses
 const addTable = document.getElementById("add-table");
-let expensesHistory = [];
-let expenseDom = ``;
-function idGenerator() {
-    return Math.floor(Math.random() * 1000000000);
-}
-function addExpenseToDom(expense) {
-    for(let i = 0; i < expense.length; i++){
-        const expenseToAdd = `
-    <tr>
-    <th>${expense[i].date}</th>
-    <td>${expense[i].description}</td>
-    <td>${expense[i].cost}</td>
-    <td>- ${expense[i].cost}</td>
-    <td><button class="button" onClick="deletingExpense(${expense[i].id})">X</button></td>
-</tr>
-    `;
-        expenseDom += expenseToAdd;
-    }
-    tableBody.innerHTML = expenseDom;
-}
 addTable.addEventListener("click", ()=>{
+    const tableBody = document.getElementById("table-body");
     const tableDate = document.getElementById("date").value;
     const tableDescription = document.getElementById("description").value;
     const tableNumber = document.getElementById("number-add-expense").value;
-    if (tableDate.trim() === "" || tableDescription.trim() === "" || tableNumber.trim() === "") alert("Please add all details.");
-    else {
-        const expense = {
-            id: idGenerator(),
-            date: tableDate,
-            description: tableDescription,
-            cost: tableNumber
-        };
-        budgetDelete(tableNumber);
-        expensesHistory.push(expense);
-        expenseDom = "";
-        addExpenseToDom(expensesHistory);
-    }
+    _addExpense.addExpense(tableDate, tableDescription, tableNumber);
+    _addExpenseToDom.addExpenseToDom(tableBody);
+    _budgetDelete.budgetDelete(tableNumber);
 });
-//deleting expense
-function deletingExpense(expenseId) {
-    newExpenseArray = expensesHistory.filter((transaction)=>transaction.id !== expenseId
-    );
-    toMinus = expensesHistory.filter((transaction)=>transaction.id === expenseId
-    );
-    budgetAdd(toMinus[0].cost);
-    expensesHistory = newExpenseArray;
-    expenseDom = "";
-    expenseDom(expensesHistory);
-}
-//adding expense from budger function
-function budgetAdd(expenseAdd) {
-    budget += Number(expenseAdd);
-    balance.innerHTML = `${budget.toFixed(2)} zł`;
-}
-// deleting to budget function
-function budgetDelete(expenseCost) {
-    budget -= Number(expenseCost);
-    balance.innerHTML = `${budget.toFixed(2)} zł`;
-}
-module.exports = {
-    idGenerator,
-    setBudgetButton
-};
 
-},{"./modules/budgetSet":"juZr6","./modules/resetBudget":"dROlz"}],"juZr6":[function(require,module,exports) {
-function settingNewBudget(budgetP, valueInputP, balanceP, resetBudgetButtonP, setBudgetButtonP) {
-    valueToSetP = valueInputP.value;
-    budgetP += Number(valueToSetP);
-    console.log(budgetP);
+},{"./modules/budgetSet":"juZr6","./modules/resetBudget":"dROlz","./modules/addExpense":"g0JGd","./modules/addExpenseToDom":"89N47","./modules/budgetDelete":"7xgV0"}],"juZr6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "settingNewBudget", ()=>settingNewBudget
+) // module.exports = { settingNewBudget };
+;
+function settingNewBudget(valueInputP, balanceP, resetBudgetButtonP, setBudgetButtonP) {
+    let budgetP = JSON.parse(window.localStorage.getItem("budget"));
+    budgetP += Number(valueInputP);
+    window.localStorage.setItem("budget", budgetP);
     balanceP.innerHTML = `${budgetP.toFixed(2)} zł`;
     resetBudgetButtonP.style.display = "block";
     setBudgetButtonP.value = "Add budget";
 }
-// export {settingNewBudget}
-module.exports = {
-    settingNewBudget
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"ciiiV":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
 };
 
 },{}],"dROlz":[function(require,module,exports) {
-function resetBudget(budgetP, balanceP) {
-    budgetP = 0;
-    balanceP.innerHTML = `${budgetP.toFixed(2)} zł`;
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "resetBudget", ()=>resetBudget
+) // module.exports = { resetBudget };
+;
+function resetBudget(balanceP) {
+    window.localStorage.setItem("budget", 0);
+    balanceP.innerHTML = `0.00 zł`;
 }
-// export { resetBudget };
-module.exports = {
-    resetBudget
-};
 
-},{}]},["i5jxM","8fvzf"], "8fvzf", "parcelRequireb9ad")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"g0JGd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addExpense", ()=>addExpense
+) // module.exports = { addExpense };
+;
+const { idGenerator  } = require("./idGenerator");
+function addExpense(tableDateP, tableDescriptionP, tableNumberP) {
+    if (tableDateP.trim() === "" || tableDescriptionP.trim() === "" || tableNumberP.trim() === "") throw Error("Please add all details.");
+    else if (window.localStorage.getItem("expenses") === null) {
+        let expenseArrayNew = [];
+        const expense = {
+            id: idGenerator(),
+            date: tableDateP,
+            description: tableDescriptionP,
+            cost: tableNumberP
+        };
+        expenseArrayNew.push(expense);
+        window.localStorage.setItem("expenses", JSON.stringify(expenseArrayNew));
+    } else {
+        const expense = {
+            id: idGenerator(),
+            date: tableDateP,
+            description: tableDescriptionP,
+            cost: tableNumberP
+        };
+        let expenseArray = JSON.parse(window.localStorage.getItem("expenses"));
+        expenseArray.push(expense);
+        window.localStorage.setItem("expenses", JSON.stringify(expenseArray));
+    }
+}
+
+},{"./idGenerator":"enI6A","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"enI6A":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "idGenerator", ()=>idGenerator
+) // module.exports = { idGenerator };
+;
+function idGenerator() {
+    return Math.floor(Math.random() * 1000000000);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"89N47":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addExpenseToDom", ()=>addExpenseToDom
+) // module.exports = { addExpenseToDom };
+;
+const { deletingExpense  } = require("./deletingExpense");
+function addExpenseToDom(tableBodyP) {
+    tableBodyP.innerHTML = "";
+    const expenseP = JSON.parse(window.localStorage.getItem("expenses"));
+    for(let i = 0; i < expenseP.length; i++){
+        const tableRow = document.createElement("tr");
+        const th = document.createElement("th");
+        const expenseDate = expenseP[i].date;
+        th.textContent = expenseDate;
+        const firstTd = document.createElement("td");
+        const expenseDescription = expenseP[i].description;
+        firstTd.textContent = expenseDescription;
+        const secondTd = document.createElement("td");
+        const expenseCost = expenseP[i].cost;
+        secondTd.textContent = expenseCost;
+        thirdTd = document.createElement("td");
+        thirdTd.textContent = `- ${expenseCost}`;
+        fourthTd = document.createElement("td");
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "X";
+        deleteButton.classList.add("button");
+        deleteButton.addEventListener("click", ()=>{
+            deletingExpense(expenseP[i].id);
+        });
+        fourthTd.appendChild(deleteButton);
+        tableRow.appendChild(th);
+        tableRow.appendChild(firstTd);
+        tableRow.appendChild(secondTd);
+        tableRow.appendChild(thirdTd);
+        tableRow.appendChild(fourthTd);
+        tableBodyP.appendChild(tableRow);
+    }
+}
+
+},{"./deletingExpense":"4N58R","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"4N58R":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "deletingExpense", ()=>deletingExpense
+) // module.exports = { deletingExpense };
+;
+const { budgetAdd  } = require("./budgetAdd");
+const { addExpenseToDom  } = require("./addExpenseToDom");
+function deletingExpense(expenseIdP) {
+    const expensesHistory = JSON.parse(window.localStorage.getItem("expenses"));
+    newExpenseArray = expensesHistory.filter((transaction)=>transaction.id !== expenseIdP
+    );
+    toMinus = expensesHistory.filter((transaction)=>transaction.id === expenseIdP
+    );
+    budgetAdd(toMinus[0].cost);
+    window.localStorage.setItem("expenses", JSON.stringify(newExpenseArray));
+    const tableBodyP = document.getElementById("table-body");
+    addExpenseToDom(tableBodyP);
+}
+
+},{"./budgetAdd":"kT2em","./addExpenseToDom":"89N47","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"kT2em":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "budgetAdd", ()=>budgetAdd
+) // module.export = { budgetAdd };
+;
+function budgetAdd(expenseAdd) {
+    let budget = JSON.parse(window.localStorage.getItem("budget"));
+    budget += Number(expenseAdd);
+    window.localStorage.setItem("budget", JSON.stringify(budget));
+    balance.innerHTML = `${budget.toFixed(2)} zł`;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"7xgV0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "budgetDelete", ()=>budgetDelete
+) // module.export = { budgetDelete };
+;
+function budgetDelete(expenseCost) {
+    let budget = JSON.parse(window.localStorage.getItem("budget"));
+    budget -= Number(expenseCost);
+    window.localStorage.setItem("budget", JSON.stringify(budget));
+    balance.innerHTML = `${budget.toFixed(2)} zł`;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}]},["i5jxM","8fvzf"], "8fvzf", "parcelRequireb9ad")
 
 //# sourceMappingURL=index.5d140dba.js.map

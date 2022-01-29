@@ -1,7 +1,7 @@
-function resetBudget(budgetP, balanceP) {
-  budgetP = 0;
-  balanceP.innerHTML = `${budgetP.toFixed(2)} zł`;
+function resetBudget(balanceP) {
+  window.localStorage.setItem("budget", 0);
+  balanceP.innerHTML = `0.00 zł`;
 }
 
-// export { resetBudget };
-module.exports = { resetBudget };
+export { resetBudget };
+// module.exports = { resetBudget };

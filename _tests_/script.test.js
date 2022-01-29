@@ -182,28 +182,35 @@ describe("Functionality for adding expense to DOM:", () => {
   });
 
   test("Function for adding expense is creating a DOM model correctly.", () => {
-    const expense = [{
-      date: "2020-06-12",
-      description: "description",
-      cost: "199",
-      id: "2131231232343",
-    }];
+    const expense = [
+      {
+        date: "2020-06-12",
+        description: "description",
+        cost: "199",
+        id: "2131231232343",
+      },
+    ];
 
-    let expectedExpenseDom = `
+    let expectedExpenseDom = [`
     <tr>
     <th>2020-06-12</th>
     <td>description</td>
     <td>199</td>
     <td>- 199</td>
     <td><button class="button" onClick="deletingExpense(2131231232343)">X</button></td>
-</tr>
-    `;
-    var expenseDom = "";
-    var tableBody = [];
-    addExpenseToDom(expense, expenseDom, tableBody); // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    expect(expenseDom).toContainEqual(expectedExpenseDom);
+</tr>`
+    ]
+    let expenseDom = [];
+    let tableBody = [];
+    addExpenseToDom(expense, expenseDom, tableBody);
+    expect(expenseDom).toEqual(expect.objectContaining(expectedExpenseDom));
   });
 
-  test("Function for adding a expense is adding a expenses to DOM.", () => {
-  })
+  test("Function for adding a expense is adding a expenses to DOM.", () => {});
 });
+
+
+description("Functionality for deleting expense:", () => {
+
+  
+}) 
