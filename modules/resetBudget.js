@@ -3,5 +3,5 @@ function resetBudget(balanceP) {
   balanceP.innerHTML = `0.00 zł`;
 }
 
-export { resetBudget };
-// module.exports = { resetBudget };
+// export { resetBudget };
+module.exports = { resetBudget };

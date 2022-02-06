@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/9</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">85.71% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>6/7</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/9</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
@@ -95,30 +95,33 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -127,46 +130,49 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-    // const tableDate = document.getElementById("date").value;
-    // const tableDescription = document.getElementById("description").value;
-    // const tableNumber = document.getElementById("number-add-expense").value;
-    const { idGenerator } = require("./idGenerator");
-    
-  
-    function addExpense(tableDateP, tableDescriptionP, tableNumberP, expensesHistoryP, expenseDomP) {
-    if (
-        
-      tableDateP.trim() === "" ||
-      tableDescriptionP.trim() === "" ||
-      tableNumberP.trim() === ""
-    ) {
-      throw "Please add all details.";
-    } else {
-      const expense = {
-        id: idGenerator(),
-        date: tableDateP,
-        description: tableDescriptionP,
-        cost: tableNumberP,
-      };
-  
-      budgetDelete(tableNumber);
-  
-<span class="cstat-no" title="statement not covered" >      expensesHistoryP.push(expense);</span>
-<span class="cstat-no" title="statement not covered" >      expenseDomP = "";</span>
-<span class="cstat-no" title="statement not covered" >      addExpenseToDom(expensesHistory);</span>
-    }
-  };
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { idGenerator } = require("./idGenerator");
 &nbsp;
-//   export { addExpense };
-  module.exports = { addExpense };</pre></td></tr></table></pre>
+function addExpense(tableDateP, tableDescriptionP, tableNumberP) {
+  if (
+    tableDateP.trim() === "" ||
+    tableDescriptionP.trim() === "" ||
+    tableNumberP.trim() === ""
+  ) {
+    throw Error("Please add all details.");
+  } else if (window.localStorage.getItem("expenses") === null) {
+    let expenseArrayNew = [];
+    const expense = {
+      id: idGenerator(),
+      date: tableDateP,
+      description: tableDescriptionP,
+      cost: tableNumberP,
+    };
+    expenseArrayNew.push(expense);
+    window.localStorage.setItem("expenses", JSON.stringify(expenseArrayNew));
+  } else <span class="missing-if-branch" title="else path not taken" >E</span>{
+    const expense = <span class="cstat-no" title="statement not covered" >{</span>
+      id: idGenerator(),
+      date: tableDateP,
+      description: tableDescriptionP,
+      cost: tableNumberP,
+    };
+    let expenseArray = <span class="cstat-no" title="statement not covered" >JSON.parse(window.localStorage.getItem("expenses"));</span>
+<span class="cstat-no" title="statement not covered" >    expenseArray.push(expense);</span>
+<span class="cstat-no" title="statement not covered" >    window.localStorage.setItem("expenses", JSON.stringify(expenseArray));</span>
+  }
+}
+&nbsp;
+// export { addExpense };
+module.exports = { addExpense };
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jan 18 2022 18:29:53 GMT+0100 (czas środkowoeuropejski standardowy)
+                at Sun Feb 06 2022 19:06:02 GMT+0100 (czas środkowoeuropejski standardowy)
             </div>
         <script src="prettify.js"></script>
         <script>

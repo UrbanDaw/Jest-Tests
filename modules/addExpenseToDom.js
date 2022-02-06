@@ -44,5 +44,5 @@ function addExpenseToDom(tableBodyP) {
     tableBodyP.appendChild(tableRow);
   }
 }
-export { addExpenseToDom };
-// module.exports = { addExpenseToDom };
+// export { addExpenseToDom };
+module.exports = { addExpenseToDom };

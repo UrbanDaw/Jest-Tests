@@ -12,14 +12,14 @@ function deletingExpense(expenseIdP) {
     (transaction) => transaction.id === expenseIdP
   );
 
-  budgetAdd(toMinus[0].cost);
+  // budgetAdd(toMinus[0].cost);
 
   window.localStorage.setItem("expenses", JSON.stringify(newExpenseArray));
 
   const tableBodyP = document.getElementById("table-body");
 
-  addExpenseToDom(tableBodyP);
-}
+  // addExpenseToDom(tableBodyP);
+};
 
-export { deletingExpense };
-// module.exports = { deletingExpense };
+// export { deletingExpense };
+module.exports = { deletingExpense };

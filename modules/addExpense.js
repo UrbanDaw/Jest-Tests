@@ -30,5 +30,5 @@ function addExpense(tableDateP, tableDescriptionP, tableNumberP) {
   }
 }
 
-export { addExpense };
-// module.exports = { addExpense };
+// export { addExpense };
+module.exports = { addExpense };

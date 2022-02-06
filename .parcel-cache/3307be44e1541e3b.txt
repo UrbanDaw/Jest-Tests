@@ -42,10 +42,10 @@
 72C:\Users\Urban\Desktop\Jest\node_modules\@parcel\transformer-svg\LICENSE132865620978096250 0
 77C:\Users\Urban\Desktop\Jest\node_modules\css-tree\lib\syntax\node\Selector.js132865620966926193 0
 61C:\Users\Urban\Desktop\Jest\node_modules\weak-lru-cache\tests132865620958229563 1
-37C:\Users\Urban\Desktop\Jest\style.css132865623526062570 0
+37C:\Users\Urban\Desktop\Jest\style.css132879690757442522 0
 63C:\Users\Urban\Desktop\Jest\node_modules\normalize-path\LICENSE132857919741020352 0
 66C:\Users\Urban\Desktop\Jest\node_modules\lodash\matchesProperty.js132857919789349232 0
-32C:\Users\Urban\Desktop\Jest\dist132879665643877517 1
+32C:\Users\Urban\Desktop\Jest\dist132879690758122962 1
 75C:\Users\Urban\Desktop\Jest\node_modules\core-js\modules\es.array.reduce.js132865620969399583 0
 71C:\Users\Urban\Desktop\Jest\node_modules\@parcel\core\lib\AssetGraph.js132865620994646590 0
 72C:\Users\Urban\Desktop\Jest\node_modules\css-tree\lib\tokenizer\utils.js132865620967075187 0
@@ -653,7 +653,7 @@
 58C:\Users\Urban\Desktop\Jest\node_modules\babel-preset-jest132857919750270322 1
 69C:\Users\Urban\Desktop\Jest\node_modules\readable-stream\package.json132865620962163157 0
 54C:\Users\Urban\Desktop\Jest\node_modules\cssnano-utils132865620960370194 1
-55C:\Users\Urban\Desktop\Jest\dist\index.de101254.css.map132879663305266898 0
+55C:\Users\Urban\Desktop\Jest\dist\index.de101254.css.map132879690758113028 0
 90C:\Users\Urban\Desktop\Jest\node_modules\terser\node_modules\source-map\lib\source-node.js132865620962227720 0
 94C:\Users\Urban\Desktop\Jest\node_modules\caniuse-lite\data\features\stricttransportsecurity.js132857919790834234 0
 76C:\Users\Urban\Desktop\Jest\node_modules\highlight.js\scss\brown-papersq.png132865620968416183 0
@@ -19663,7 +19663,7 @@
 50C:\Users\Urban\Desktop\Jest\modules\resetBudget.js132879662700452172 0
 50C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js132879665643857654 0
 54C:\Users\Urban\Desktop\Jest\dist\index.5d140dba.js.map132879665643872547 0
-51C:\Users\Urban\Desktop\Jest\dist\index.de101254.css132879663305247029 0
+51C:\Users\Urban\Desktop\Jest\dist\index.de101254.css132879690758098121 0
 43C:\Users\Urban\Desktop\Jest\dist\index.html132879663305237096 0
 49C:\Users\Urban\Desktop\Jest\dist\Jest.45ee5e70.js132867503886221918 0
 40C:\Users\Urban\Desktop\Jest\dist\main.js132867437123837502 0
