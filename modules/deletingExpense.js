@@ -19,7 +19,7 @@ function deletingExpense(expenseIdP) {
   const tableBodyP = document.getElementById("table-body");
 
   addExpenseToDom(tableBodyP);
-};
+}
 
 // export { deletingExpense };
 module.exports = { deletingExpense };

@@ -3,7 +3,7 @@ function budgetAdd(expenseAdd) {
   budget += Number(expenseAdd);
   window.localStorage.setItem("budget", JSON.stringify(budget));
   // balance.innerHTML = `${budget.toFixed(2)} zł`;
-};
+}
 
 // export { budgetAdd };
 module.exports = { budgetAdd };

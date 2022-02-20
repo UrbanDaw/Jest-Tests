@@ -3,9 +3,6 @@ import { resetBudget } from "./modules/resetBudget";
 import { addExpense } from "./modules/addExpense";
 import { addExpenseToDom } from "./modules/addExpenseToDom";
 import { budgetDelete } from "./modules/budgetDelete";
-import { deletingExpense } from "./modules/deletingExpense";
-
-// Set budget - tested
 
 window.localStorage.setItem("budget", 0);
 
@@ -18,7 +15,6 @@ setBudgetButton.addEventListener("click", () => {
   settingNewBudget(valueInput, balance, resetBudgetButton, setBudgetButton);
 });
 
-// reset budget - tested
 const resetBudgetButton = document.getElementById("budget-reset-button");
 
 resetBudgetButton.addEventListener("click", () => {
@@ -26,7 +22,6 @@ resetBudgetButton.addEventListener("click", () => {
   resetBudget(balance);
 });
 
-// Generating a table of expenses
 const addTable = document.getElementById("add-table");
 
 addTable.addEventListener("click", () => {
