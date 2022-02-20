@@ -25,6 +25,7 @@ function addExpenseToDom(tableBodyP) {
     thirdTd.textContent = `- ${expenseCost}`;
 
     fourthTd = document.createElement("td");
+    console.log(expenseP[i].id);
 
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "X";

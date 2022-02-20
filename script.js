@@ -3,6 +3,7 @@ import { resetBudget } from "./modules/resetBudget";
 import { addExpense } from "./modules/addExpense";
 import { addExpenseToDom } from "./modules/addExpenseToDom";
 import { budgetDelete } from "./modules/budgetDelete";
+import { deletingExpense } from "./modules/deletingExpense";
 
 // Set budget - tested
 
